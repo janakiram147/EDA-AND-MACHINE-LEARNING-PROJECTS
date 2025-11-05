@@ -1,133 +1,149 @@
-# 🏙️ Airbnb Listings EDA Project — New York 2024
+🏙️ Airbnb Listings EDA Project: New York 2024
 
-![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
-![Pandas](https://img.shields.io/badge/Library-Pandas-yellow?logo=pandas)
-![NumPy](https://img.shields.io/badge/Library-NumPy-blue?logo=numpy)
-![Matplotlib](https://img.shields.io/badge/Visualization-Matplotlib-orange?logo=plotly)
-![Seaborn](https://img.shields.io/badge/Visualization-Seaborn-lightblue?logo=seaborn)
-![EDA](https://img.shields.io/badge/Skill-EDA-brightgreen)
-![Data Cleaning](https://img.shields.io/badge/Skill-Data-Cleaning-purple)
-![Data Visualization](https://img.shields.io/badge/Skill-Data-Visualization-darkgreen)
 
----
 
-## 📘 Project Overview
-This project performs **Exploratory Data Analysis (EDA)** on the **New York Airbnb listings (2024)** dataset to uncover pricing patterns, room-type trends, host behavior, and availability insights.  
-Using **Pandas**, **NumPy**, **Matplotlib**, and **Seaborn**, the notebook cleans, analyzes, and visualizes large datasets to reveal useful trends for hosts and guests.
 
-![](https://github.com/janakiram147/EDA-AND-MACHINE-LEARNING-PROJECTS/blob/main/Airbnb%20Listings%20EDA%20Project:%20New%20York%202024/New-York-City-Brooklyn-Bridge-Panorama-Juergen-Roth-2.jpg)
 
----
 
-## 🎯 Objectives
-1. Analyze **room types, prices, and availability** across New York’s neighborhoods.  
-2. Identify **host behavior** and common listing patterns.  
-3. Detect and remove **outliers** in price distribution.  
-4. Provide **data-driven recommendations** for guests and hosts.
 
----
 
-## 📂 Dataset
-The dataset contains Airbnb listing information such as:
 
-- **id** – Listing identifier  
-- **host_id** – Host unique ID  
-- **neighborhood_group** – Borough (e.g., Manhattan, Brooklyn)  
-- **latitude / longitude** – Location coordinates  
-- **price** – Price per night  
-- **room_type** – Room category (Entire home, Private room, etc.)  
-- **availability_365** – Days available in a year  
-- **reviews_per_month** – Monthly review count  
 
----
+📘 Project Overview
 
-## ⚙️ Steps and Workflow
+This project performs Exploratory Data Analysis (EDA) on Airbnb listings in New York City (2024) to uncover rental trends, pricing patterns, and host behaviors.
+It uses Pandas, NumPy, Matplotlib, and Seaborn for cleaning, visualization, and insight generation.
 
-### 🧹 1. Data Cleaning
-- Removed **missing values** and **duplicates**.  
-- Fixed incorrect **data types** (`id`, `host_id` as object, `last_review` as datetime).  
-- Filtered out **price outliers** above \$1,500 for more accurate visualization.
+🎯 Objectives
 
-### 📊 2. EDA and Visualization
-1. **Univariate Analysis**  
-   - Used `sns.histplot` and `sns.boxplot` for `price`, `availability_365`, and `reviews_per_month`.  
-   - Detected skewness and potential outliers.
+Analyze room types, prices, and availability across different neighborhoods.
 
-2. **Bivariate Analysis**  
-   - Explored relationships between price, room type, and location using bar plots and scatter plots.  
-   - Found Manhattan as the most expensive borough.
+Study host behavior and listing patterns.
 
-3. **Feature Engineering**  
-   - Created filtered datasets and summary statistics for clearer analysis.
+Detect and handle outliers in pricing data.
 
-4. **Visual Insights**  
-   - **Heatmaps** for correlation among numeric features.  
-   - **Boxplots** and **Histograms** for price distribution.  
-   - **Bar charts** showing neighborhood and room type counts.
+Provide data-driven recommendations for guests and hosts.
 
----
+📊 Dataset
 
-## 📈 Key Insights
-1. **Manhattan** has the highest-priced listings, while **Bronx and Queens** are more affordable.  
-2. **Entire homes/apartments** dominate the market but are costlier.  
-3. **Private rooms** are best for budget travelers.  
-4. **High-availability listings** tend to have more reviews and lower prices.  
-5. Several **hosts manage multiple listings**, indicating professional operations.
+The dataset contains ~20,000 Airbnb listings with the following key features:
 
----
+id: Unique identifier
 
-## 🧠 Recommendations
-### 💼 For Hosts
-- Maintain **competitive pricing** and availability to boost bookings.  
-- Respond to reviews promptly to improve host ratings.
+name: Listing title
 
-### 🏡 For Guests
-- Prefer **Brooklyn or Queens** for affordable stays.  
-- Look for listings with **high review counts** for a better experience.
+host_name: Host’s name
 
----
+neighborhood_group: Borough of the listing
 
-## 🚀 How to Run the Project
-```bash
-# Clone repository
+latitude, longitude: Location coordinates
+
+price: Nightly rate
+
+room_type: Accommodation type
+
+reviews_per_month: Average monthly reviews
+
+availability_365: Available days per year
+
+🧹 Data Cleaning
+
+Handled missing values in price, beds, and neighborhood.
+
+Converted date fields (e.g., last_review) to datetime format.
+
+Filtered listings with price > $1,000 to reduce skewed visuals.
+
+📈 Exploratory Data Analysis
+1. Room Type Distribution
+
+Visualized using bar charts; Entire home/apt was the most common.
+
+2. Price by Neighborhood
+
+Manhattan showed the highest average prices.
+
+Brooklyn followed as a popular mid-range area.
+
+3. Availability Trends
+
+Used heatmaps to correlate price, availability, and reviews.
+
+4. Outlier Detection
+
+Boxplots and histograms were used to detect extreme price points.
+
+5. Host Insights
+
+Analyzed hosts with multiple listings — many are professional hosts managing several properties.
+
+📉 Visualizations Used
+
+Histograms & Boxplots → Price distribution and outliers
+
+Barplots → Room types and borough comparisons
+
+Heatmaps → Correlation among numerical variables
+
+Pairplots → Relationship between reviews, price, and availability
+
+🔍 Key Findings
+
+Manhattan listings are the most expensive.
+
+Entire homes/apartments dominate but are costlier than private rooms.
+
+Outliers exist above $10,000/night and should be filtered.
+
+High availability often links to lower prices.
+
+Some hosts manage multiple listings, showing professional behavior.
+
+⚙️ How to Run This Project
+# Clone the repository
 git clone https://github.com/janakiram147/EDA-AND-MACHINE-LEARNING-PROJECTS.git
+
+# Navigate to the project folder
 cd "Airbnb Listings EDA Project: New York 2024"
 
-# Install dependencies
-pip install pandas numpy matplotlib seaborn jupyter
+# Install required libraries
+pip install pandas numpy matplotlib seaborn
 
 # Run the notebook
-jupyter notebook
-🔮 Future Enhancements
-Build a Machine Learning model to predict prices based on location and features.
+jupyter notebook airbnb_eda.ipynb
 
-Perform Sentiment Analysis on guest reviews.
+💡 Recommendations
 
-Develop an interactive dashboard using Plotly or Power BI.
+For Guests:
 
-🪪 License
-This project is open-source under the MIT License.
+Look for listings with many reviews and high availability.
+
+Private rooms in Brooklyn are great value for money.
+
+For Hosts:
+
+Improve review response rate and availability.
+
+Adjust pricing competitively within your borough.
+
+🚀 Future Work
+
+Integrate Machine Learning for price prediction.
+
+Add sentiment analysis on customer reviews.
+
+Build an interactive dashboard using Plotly or Tableau.
+
+🧾 License
+
+This project is open-source under the MIT License
+.
+Feel free to use, share, or modify the code.
 
 📬 Contact
-GitHub: janakiram147
-Feel free to connect for queries or collaboration.
 
-yaml
-Copy code
+Author: Janakiram
 
----
+Repository: EDA and Machine Learning Projects
 
-If you like this, I can **generate the file and share it for download** so you can drop it directly into your repo. Do you want that?
-::contentReference[oaicite:0]{index=0}
-
-
-
-
-
-
-
-
-
-
-
-ChatG
+LinkedIn: Your LinkedIn Profile
