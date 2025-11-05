@@ -112,14 +112,6 @@ This project is open-source under the MIT License.
 GitHub: janakiram147
 Feel free to connect for queries or collaboration.
 
-yaml
-Copy code
-
----
-
-If you like this, I can **generate the file and share it for download** so you can drop it directly into your repo. Do you want that?
-::contentReference[oaicite:0]{index=0}
-
 
 
 
